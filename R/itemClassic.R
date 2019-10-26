@@ -27,7 +27,6 @@ function(thr, yRange = NULL, axis.items = "Items",axis.logits = "Logits",show.ax
 	
 	#debug
 	throrig <- thr ;
-	throrig
 	#enddebug
 	thr <- as.matrix(thr)
 
@@ -72,8 +71,9 @@ function(thr, yRange = NULL, axis.items = "Items",axis.logits = "Logits",show.ax
 
 	# item.labels - use generic list or user defined item names 
 	if (item.names.labels==FALSE){
-	        item.labels <- matrix(rep(formatC(1:nI, digits = 1, format = "d", flag = "0"), nL), ncol = nL)
+	    item.labels <- matrix(rep(formatC(1:nI, digits = 1, format = "d", flag = "0"), nL), ncol = nL)
 	}else if(item.names.labels==TRUE){
+		print(throrig)
 		item.labels<-matrix(row.names(throrig))
 	}
 		
