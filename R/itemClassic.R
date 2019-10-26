@@ -74,7 +74,7 @@ function(thr, yRange = NULL, axis.items = "Items",axis.logits = "Logits",show.ax
 	    item.labels <- matrix(rep(formatC(1:nI, digits = 1, format = "d", flag = "0"), nL), ncol = nL)
 	}else if(item.names.labels==TRUE){
 		print(throrig)
-		item.labels<-matrix(row.names(throrig))
+		item.labels<-as.matrix(row.names(throrig))
 	}
 		
         if(nL > 1){
