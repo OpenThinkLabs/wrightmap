@@ -27,7 +27,7 @@ function(thr, yRange = NULL, axis.items = "Items",axis.logits = "Logits",show.ax
 	
 	#debug
 	throrig <- thr ;
-	print(paste("throrig =", throrig))
+	throrig
 	#enddebug
 	thr <- as.matrix(thr)
 
