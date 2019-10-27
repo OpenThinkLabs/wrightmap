@@ -24,10 +24,7 @@ function(thr, yRange = NULL, axis.items = "Items",axis.logits = "Logits",show.ax
 		paste(sort(labelMat[cutMat == level]), collapse = " | ")
 
 	}
-	
-	#debug
-	throrig <- thr ;
-	#enddebug
+
 	thr <- as.matrix(thr)
 
 	nI <- dim(thr)[1]
@@ -72,9 +69,8 @@ function(thr, yRange = NULL, axis.items = "Items",axis.logits = "Logits",show.ax
 	# item.labels - use generic list or user defined item names 
 	if (item.names.labels==FALSE){
 	    item.labels <- matrix(rep(formatC(1:nI, digits = 1, format = "d", flag = "0"), nL), ncol = nL)
-		print(matrix(rep(formatC(1:nI, digits = 1, format = "d", flag = "0"), nL), ncol = nL))
-	}else if(item.names.labels==TRUE){
-		item.labels <- matrix(row.names(throrig))
+	}else if(item.names.labels==TRUE && is.null(item.labels)){
+		item.labels <- matrix(row.names(thr))
 	}
 		
         if(nL > 1){

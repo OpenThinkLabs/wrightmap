@@ -1,5 +1,5 @@
 wrightMap <-
-function(thetas, thresholds = NULL, item.side = itemModern, person.side = personHist,  main.title = "Wright Map", min.logit.pad = 0.25, max.logit.pad = 0.25, min.l = NULL, max.l = NULL, item.prop = 0.8, return.thresholds = TRUE, new.quartz = FALSE, use.hist = NULL, item.names.labels=FALSE, ...) {
+function(thetas, thresholds = NULL, item.side = itemModern, person.side = personHist,  main.title = "Wright Map", min.logit.pad = 0.25, max.logit.pad = 0.25, min.l = NULL, max.l = NULL, item.prop = 0.8, return.thresholds = TRUE, new.quartz = FALSE, use.hist = NULL, item.names.labels=FALSE,item.labels=NULL, ...) {
 
 	## Helper Functions
 
